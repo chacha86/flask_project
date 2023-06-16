@@ -15,9 +15,11 @@ age2 = 22
 name2 = "이순신"
 
 
+## 사람을 모델링함.
+
 ## Person class
 class Person:
-    def __init__(self, age, name, address) :
+    def __init__(self, age, name, address, phone) :
         self.age = age
         self.name = name
         self.address = address
@@ -36,5 +38,6 @@ p1.introduce()
 p2.introduce()
 p3.introduce()
 
+p1.age
 
 
