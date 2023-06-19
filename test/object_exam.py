@@ -27,7 +27,7 @@ class Person:
     def introduce(self) :
         print(f"{self.age}살 {self.name}입니다.")
 
-p1 = Person(20, "홍길동", "대전") # Person class를 이용해서 복사본 하나 만들기
+p1 = Person(age = 20, name = "홍길동", address = "대전") # Person class를 이용해서 복사본 하나 만들기
 p2 = Person(22, "이순신", "서울") # Person class를 이용해서 복사본 하나 만들기
 p3 = Person(32, "황진이", "광주") # Person class를 이용해서 복사본 하나 만들기
 
