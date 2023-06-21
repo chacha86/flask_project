@@ -9,5 +9,19 @@
 <div>
     {{ question.content }}
 </div>
+<h5>{{ question.answer_set|length }}개의 답변이 있습니다.</h5>
+<div>
+    <ul>
+    {% for answer in question.answer_set %}
+        <li>{{ answer.content }}</li>
+    {% endfor %}
+    </ul>
+</div>
+<!-- form이란 고객에게 보낼 화면에 입력할 수 있는 형태를 집어넣어서 고객이 입력한 값이 우리 프로그램으로 넘어도록 유도. -->
+<!-- form action은 고객이 입력한 값이 넘어오는 구체적인 함수-->
+<form action="{{ url_for('answer.create', question_id=question.id) }}" method="post">
+    <textarea name="content" id="content" rows="15"></textarea>
+    <input type="submit" value="전송하기">
+</form>
 </body>
 </html>
