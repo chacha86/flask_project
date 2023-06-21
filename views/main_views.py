@@ -11,3 +11,8 @@ def hello_pybo():
 @bp.route('/')
 def index():
     return 'Pybo index'
+
+
+@bp.route('testsets')
+def dsfsdf():
+    print('adfasdf')
