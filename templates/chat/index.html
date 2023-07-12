@@ -77,7 +77,7 @@
         </div>
     </div>
     <div class="right">
-        <ul class="chat">
+        <ul id="chat" class="chat">
             {% for message in message_list %}
             <li class="chat-list1 flex">
                 <div class="pro-img"></div>
@@ -100,5 +100,11 @@
     </div>
 </div>
 </body>
+<script>
+    let chatBox = document.getElementById("chat");
+    console.log(chatBox.scrollHeight);
+    chatBox.scrollTop = chatBox.scrollHeight;
+    window.scrollTo(0, document.body.scrollHeight);
 
+</script>
 </html>
